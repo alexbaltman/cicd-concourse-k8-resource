@@ -5,6 +5,7 @@ exec 3>&1 # use fd 3 for script output
 exec 1>&2 # send normal stdout to stderr for logging
 jq -M -S . < /dev/stdin > /tmp/input
 
+echo "Script name: "$0
 deploy() {
     DEPLOYMENT=$1
     CONTAINER=$2
